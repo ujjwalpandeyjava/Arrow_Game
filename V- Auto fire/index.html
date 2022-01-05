@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Arrow hit game - Auto fire (5 pts)</title>
+</head>
+<style>
+	#whatGoingOn {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: flex-start;
+		flex-wrap: nowrap;
+		border-bottom: 1px dotted black;
+		padding-bottom: 15px;
+	}
+</style>
+
+<body style="text-align: center">
+	<marquee width="70%" direction="left" height="50px" scrollamount="4.5">
+		On Start Round: Players will fire the Bullet/Arc automatically until one player health reaches 0 or below.<br/>Every bullet/arc takes 0-5 point
+	</marquee>
+	<div id="whatGoingOn">
+		<div>
+			<h2>Player 1</h2>
+			<span id="p1FireScore">Fired: -- points<br />Player 1 remaining Health : 100</span>
+		</div>
+		<div>
+			<h2>Player 2</h2>
+			<span id="p2FireScore">Fired: -- points<br />Player 2 remaining Health : 100</span>
+		</div>
+	</div><br />
+
+	<button id="ShootBtn" onclick="shootBtn()">Start Round</button>
+	<span><button id="resetBtn" onclick="resetBtn()">Reset Button</button></span>
+
+	<br />
+	<div class="Score-Board" style="display: flex; justify-content: center; align-items: center">
+		<div style="margin-right: 50px">
+			<div class="grid-item" id="grid-item-1" style="margin-bottom: 20px">Player 1</div>
+			<div class="grid-item" id="grid-item-3" style="margin-bottom: 20px">Wins'</div>
+			<div class="grid-item" id="grid-item-4" style="margin-bottom: 20px">0</div>
+		</div>
+		<div>
+			<div class="grid-item" id="grid-item-5" style="margin-bottom: 20px">Player 2</div>
+			<div class="grid-item" id="grid-item-7" style="margin-bottom: 20px">Wins'</div>
+			<div class="grid-item" id="grid-item-8" style="margin-bottom: 20px">0</div>
+		</div>
+	</div>
+	<div class="result">
+		<div class="result-item" id="grid-item-9" style="font-weight: bold; font-size: x-large;"></div>
+	</div>
+	<div id="resetHealths"></div>
+	<script src="index.js"></script>
+</body>
+
+</html>
