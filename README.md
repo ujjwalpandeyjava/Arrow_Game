@@ -1,4 +1,4 @@
-# Simple one game
+# One Simple arrow game
 ## Two modes two versions
 
 - 1st where we have to click everytime to fire and see stats for each round and fire.
